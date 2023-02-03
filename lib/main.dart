@@ -21,8 +21,8 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final List<Map> userslist = [
-   {
-      "id":"user1",
+    {
+      "id": "user1",
       "username": "Abbos Mustafoyev",
       "imageURL": "assets/alex.jpg",
       "phonenumber": "(998)91-308-40-01",
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
       "username": "Jamshid do'st",
       "imageURL": "assets/jamshid.jpg",
       "phonenumber": "(81)80-8542-1431",
-    }, 
+    },
     {
       "id": "user8",
       "username": "Shaxzod jo'ram",
@@ -72,9 +72,7 @@ class HomePage extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-   for (var user in userslist){
-    
-   }
+    for (var user in userslist) {}
     return Scaffold(
       backgroundColor: const Color.fromARGB(221, 255, 255, 255),
       body: SafeArea(

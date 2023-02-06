@@ -10,9 +10,12 @@ class MyContacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(
+        fontFamily: "OleoScript",
+      ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home:const HomePage(),
     );
   }
 }
@@ -29,68 +32,67 @@ class _HomePageState extends State<HomePage> {
     {
       "id": "user1",
       "username": "Abbos Mustafoyev",
-      "imageURL": "assets/alex.jpg",
+      "imageURL": "assets/images/alex.jpg",
       "phonenumber": "(998)91-308-40-01",
     },
     {
       "id": "user2",
       "username": " Mirjalol",
-      "imageURL": "assets/mirja.jpg",
+      "imageURL": "assets/images/mirja.jpg",
       "phonenumber": "(998)99-376-45-07",
     },
     {
       "id": "user3",
       "username": "Azizjon Akam",
-      "imageURL": "assets/akam.jpg",
+      "imageURL": "assets/images/akam.jpg",
       "phonenumber": "(998)95-045-01-77",
     },
     {
       "id": "user4",
       "username": "Dilshod Akam",
-      "imageURL": "assets/dAkam.jpg",
+      "imageURL": "assets/images/dAkam.jpg",
       "phonenumber": "(82)10-8210-3332",
     },
     {
       "id": "user5",
       "username": "Asad",
-      "imageURL": "assets/asad.jpg",
+      "imageURL": "assets/images/asad.jpg",
       "phonenumber": "(998)91-252-22-70",
     },
     {
       "id": "user6",
       "username": "Kamron ukew",
-      "imageURL": "assets/colys.jpg",
+      "imageURL": "assets/images/colys.jpg",
       "phonenumber": "(998)99-045-01-21",
     },
     {
       "id": "user7",
       "username": "Jamshid do'st",
-      "imageURL": "assets/jamshid.jpg",
+      "imageURL": "assets/images/jamshid.jpg",
       "phonenumber": "(81)80-8542-1431",
     },
     {
       "id": "user8",
       "username": "Shaxzod jo'ram",
-      "imageURL": "assets/shaxa.jpg",
+      "imageURL": "assets/images/shaxa.jpg",
       "phonenumber": "998-90-017-66-07",
     },
     {
       "id": "user9",
       "username": "Asad TUITiskiy",
-      "imageURL": "assets/asadtuit.jpg",
+      "imageURL": "assets/images/asadtuit.jpg",
       "phonenumber": "998-94-841-18-41",
     },
     {
       "id": "user10",
       "username": "Sardor jo'ram",
-      "imageURL": "assets/sardor.jpg",
+      "imageURL": "assets/images/sardor.jpg",
       "phonenumber": "998-99-045-50-16",
     },
-    
     {
       "id": "user11",
       "username": "Indicator Tash",
-      "imageURL": "assets/indicator.jpg",
+      "imageURL": "assets/images/indicator.jpg",
       "phonenumber": "998-99-825-39-77",
     },
   ];
@@ -137,6 +139,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 22,
+                        
                       ),
                     ),
                   ),

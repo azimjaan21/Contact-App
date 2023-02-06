@@ -17,9 +17,14 @@ class MyContacts extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final List<Map> userslist = [
     {
       "id": "user1",
@@ -70,6 +75,19 @@ class HomePage extends StatelessWidget {
       "phonenumber": "998-90-017-66-07",
     }
   ];
+
+  void userdelete(String userID) {
+  setState(() {
+      userslist.removeWhere((user) {
+      if (user["id"] == userID) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  });
+  }
+
   @override
   Widget build(BuildContext context) {
     for (var user in userslist) {}
@@ -126,6 +144,7 @@ class HomePage extends StatelessWidget {
                         username: user["username"],
                         imageURL: user["imageURL"],
                         phonenumber: user["phonenumber"],
+                        userdelete: userdelete,
                       ),
                     )
                     .toList(),

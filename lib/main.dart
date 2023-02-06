@@ -73,26 +73,45 @@ class _HomePageState extends State<HomePage> {
       "username": "Shaxzod jo'ram",
       "imageURL": "assets/shaxa.jpg",
       "phonenumber": "998-90-017-66-07",
-    }
+    },
+    {
+      "id": "user9",
+      "username": "Asad TUITiskiy",
+      "imageURL": "assets/asadtuit.jpg",
+      "phonenumber": "998-94-841-18-41",
+    },
+    {
+      "id": "user10",
+      "username": "Sardor jo'ram",
+      "imageURL": "assets/sardor.jpg",
+      "phonenumber": "998-99-045-50-16",
+    },
+    
+    {
+      "id": "user11",
+      "username": "Indicator Tash",
+      "imageURL": "assets/indicator.jpg",
+      "phonenumber": "998-99-825-39-77",
+    },
   ];
 
   void userdelete(String userID) {
-  setState(() {
+    setState(() {
       userslist.removeWhere((user) {
-      if (user["id"] == userID) {
-        return true;
-      } else {
-        return false;
-      }
+        if (user["id"] == userID) {
+          return true;
+        } else {
+          return false;
+        }
+      });
     });
-  });
   }
 
   @override
   Widget build(BuildContext context) {
     for (var user in userslist) {}
     return Scaffold(
-      backgroundColor: const Color.fromARGB(221, 255, 255, 255),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -135,6 +154,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            const SizedBox(
+              height: 15.0,
+            ),
             Expanded(
               child: ListView(
                 children: userslist
@@ -152,6 +174,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
+        child: Icon(Icons.search),
       ),
     );
   }

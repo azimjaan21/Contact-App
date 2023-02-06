@@ -18,6 +18,7 @@ class UsersItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       child: ListTile(
         leading: CircleAvatar(
           radius: 33,
